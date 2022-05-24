@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { SigninComponent } from '../modules/singin/signin.component';
+import { SigninComponent } from 'src/app/modules/singin/signin.component';
 
 @Injectable({
   providedIn: 'root'

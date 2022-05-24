@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { ModalService } from '../../services/modal.service';
+import { ModalService } from 'src/app/services/modal/modal.service';
 
 
 
