@@ -1,0 +1,32 @@
+.home-container {
+    .main-button {
+        background-color: inherit;
+        border: none;
+    }
+    background-color: rgb(253, 183, 254);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box {
+        margin: 50px auto;
+        background: #5fcf80;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(7, 37, 227);
+    }
+    .box:hover {
+        transform: rotate(360deg);
+        background: #9351a6;
+        border-radius: 50%;
+    }
+    .rotate {
+        transition: all 0.5s ease-in-out;
+    }
+    .rotate:hover {
+        transition: all 1s ease-in-out;
+    }
+}

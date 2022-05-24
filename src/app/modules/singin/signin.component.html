@@ -1,0 +1,45 @@
+<div class="flex head-line justify-space-between ">
+    <div class="flex ">
+        <p class="title">
+            אנא הכנס/י קוד אישי
+        </p>
+    </div>
+    <div class="flex text-left"><button type="button" (click)="closeModal()"><span class="v-btn__content">
+                X
+            </span></button></div>
+</div>
+<form [formGroup]="SignInForm" action="action_page.php" method="post"
+    (submit)="sendUserDataToService(userPasswordInput.value)">
+    <div class="container">
+        <div class="input-container">
+            <div fxFlex="100" class="fieldContainer">
+
+
+            </div>
+            <div fxFlex="100" class="fieldContainer">
+                <div fxFlex="10" class="visibility-container">
+                </div>
+                <mat-form-field fxFlex="90" class="right flex">
+                    <mat-label class="mat-active-label ">סיסמה</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" #userPasswordInput formControlName="PASSWORD"
+                        required>
+                    <div class="password-btn">
+                        <button type="button" *ngIf="userPasswordInput.value" (click)="userPasswordInput.value=''"
+                            matSuffix mat-icon-button aria-label="Clear">
+                        </button>
+                        <div class="visibility-container">
+
+                        </div>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="flex remember-input-container">
+            <div class="remember-input">
+
+            </div>
+        </div>
+
+    </div>
+
+</form>

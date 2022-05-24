@@ -1,0 +1,21 @@
+<section class="home-container">
+    <!-- <mat-sidenav-container>
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav-content>Main</mat-sidenav-content>
+  </mat-sidenav-container> -->
+    <section class="headline">
+        <div class="section bg1">
+            <h1 class="revealUp"></h1>
+        </div>
+        <div ng-app="myApp" ng-controller="MainCtrl">
+            <div class="container">
+                <button class="main-button" (click)="go()">
+                    <!-- <input type="checkbox" ng-model="boxClass" /> -->
+                    <div class="box rotate" ng-class="{'box': boxClass, 'circle': !boxClass} ">
+                        <h1>שמור עלי</h1>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+</section>
