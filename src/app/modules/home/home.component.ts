@@ -15,8 +15,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   go() {
-    this.modalSvc.openSigninModal();
-    this.route.navigate(['helpMeNow']); // navigate to other page
+    setTimeout(() => {
+      this.modalSvc.openSigninModal();
+      this.route.navigate(['helpMeNow']); // navigate to other page
+
+    }, 1000)
 
   }
   ngAfterViewInit() {
