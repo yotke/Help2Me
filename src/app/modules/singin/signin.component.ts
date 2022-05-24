@@ -47,7 +47,7 @@ export class SigninComponent {
   createForm() {
     this.SignInForm = this.fb.group({
       // email: new FormControl('israel@test.com', [Validators.required, Validators.email]),
-      PASSWORD: new FormControl('Aa123456!', [Validators.required])
+      PASSWORD: new FormControl('', [Validators.required])
     })
   }
 }
