@@ -24,7 +24,7 @@ export class HelpMeComponent implements OnInit {
 
   showMale() {
     this.toastr.toastrConfig.positionClass = "toast-top-center"
-    this.toastr.success('!מישהו בדרך אליך ', 'שלום');
+    this.toastr.success('!מישהו בדרך אליך ', '');
     setTimeout(() => {
       this.toastr.error('אירוע אלימות בקרבת מקום', '!שים לב');
     }, 10000)
