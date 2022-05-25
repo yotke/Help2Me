@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-help-me',
   templateUrl: './help-me.component.html',
@@ -11,11 +12,30 @@ export class HelpMeComponent implements OnInit {
   markerPositions: google.maps.LatLngLiteral[] = [];
 
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.showMale();
+    }, 7000);
+
+    // this.showWomen();
   }
 
+  showMale() {
+    this.toastr.toastrConfig.positionClass = "toast-top-center"
+    this.toastr.success('!מישהו בדרך אליך ', 'שלום');
+    setTimeout(() => {
+      this.toastr.error('אירוע אלימות בקרבת מקום', '!שים לב');
+    }, 10000)
+  }
+  showWomen() {
+    this.toastr.toastrConfig.positionClass = "toast-top-center"
+    this.toastr.success('תודה שהתחברת למערכת על מנת לעזור לחפים מפשע', 'שלום');
+    setTimeout(() => {
+      this.toastr.warning('אנא שמור/י על פרטיות המשתתפים,הפרה של חוקים אלה תביא לסילוק מהאתר', 'אזהרה');
+    }, 10000)
+  }
   addMarker(event: google.maps.MapMouseEvent) {
     // this.markerOptions.shape = { coords: [1, 1, 1, 20, 18, 20, 18, 1], type: "poly" }
     console.log(event);

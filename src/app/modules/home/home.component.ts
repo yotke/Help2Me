@@ -15,17 +15,9 @@ export class HomeComponent implements OnInit {
   constructor(private route: Router, private modalSvc: ModalService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.showSuccess();
-  }
-
-  showSuccess() {
-    this.toastr.toastrConfig.positionClass = "toast-top-center"
-    this.toastr.success('תודה שהתחברת למערכת על מנת לעזור לחפים מפשע', 'שלום');
-    setTimeout(() => {
-      this.toastr.warning('אנא שמור/י על פרטיות המשתתפים,הפרה של חוקים אלה תביא לסילוק מהאתר', 'אזהרה');
-    }, 2000)
 
   }
+
   go() {
     setTimeout(() => {
       this.modalSvc.openSigninModal();
